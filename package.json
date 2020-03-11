@@ -1,0 +1,31 @@
+{
+  "name": "pavelfreelance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavelgitvasilev/pavelfreelance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavelgitvasilev/pavelfreelance/issues"
+  },
+  "homepage": "https://github.com/pavelgitvasilev/pavelfreelance#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-useref": "^4.0.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-minify-css": "^1.2.4"
+  }
+}
