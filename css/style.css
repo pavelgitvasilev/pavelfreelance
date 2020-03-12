@@ -503,7 +503,6 @@ img {
   display: inline-block;
   text-align: center;
   font-size: 1.42rem;
-  line-height: 1.92rem;
   color: #363636; }
 
 .row {
@@ -547,6 +546,9 @@ img {
   background-color: #E3B873;
   color: #fff;
   padding: 1.214rem 2.6rem; }
+
+.card--pricetag {
+  padding-right: 5.14rem; }
 
 @media screen and (max-width: 1200px) {
   html {
