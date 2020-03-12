@@ -513,7 +513,8 @@ img {
       font-size: 1.42rem;
       line-height: 1.92rem;
       color: #363636;
-      max-width: 52.92rem; }
+      max-width: 52.92rem;
+      margin-bottom: 0.6rem; }
 
 .row {
   display: flex;
