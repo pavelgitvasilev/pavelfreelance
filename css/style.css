@@ -497,12 +497,19 @@ img {
 .types__section-title {
   margin-bottom: 2rem; }
 
-.section-title__subtitle {
+.types__subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.subtitle {
+  max-width: 70%;
   font-family: 'Futura Book', cursive;
-  width: 78%;
-  display: inline-block;
+  margin: 0;
+  margin-bottom: 2.78rem;
   text-align: center;
   font-size: 1.42rem;
+  line-height: 1.92rem;
   color: #363636; }
 
 .row {
@@ -598,6 +605,8 @@ img {
 
 @media screen and (max-width: 520px) {
   .hero__scroll-down {
+    display: none; }
+  .types__subtitle {
     display: none; } }
 
 @media screen and (max-height: 520px) {
