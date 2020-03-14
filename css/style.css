@@ -606,6 +606,25 @@ img {
 .card--pricetag {
   padding-right: 5.14rem; }
 
+.wrap {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden; }
+  .wrap--dark {
+    opacity: 1;
+    visibility: visible; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
