@@ -79,6 +79,20 @@
     cursor: pointer;
     margin-right: 0.64rem; }
 
+.scroll {
+  display: block;
+  opacity: 0.5;
+  position: fixed;
+  right: 2.42rem;
+  bottom: 7.4rem;
+  color: #000;
+  transition: 1s; }
+  .scroll:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: 1s;
+    color: #000; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -605,25 +619,6 @@ img {
 
 .card--pricetag {
   padding-right: 5.14rem; }
-
-.wrap {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(19, 19, 19, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden; }
-  .wrap--dark {
-    opacity: 1;
-    visibility: visible; }
 
 .modal {
   opacity: 0;
