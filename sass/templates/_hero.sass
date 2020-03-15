@@ -15,6 +15,15 @@
    width: 100%
    height: 100%
    background-color: rgba($dark, 0.7)
+ &::after
+   content: ''
+   position: absolute
+   width: 100%
+   height: 3.46rem
+   bottom: 0
+   left: 0
+   right: 0
+   background-color: $dark
  &__content
   position: relative
   max-width: 47.85rem
@@ -34,6 +43,7 @@
   max-width: 80px
   height: 100%
  &__scroll-down
+  z-index: 3
   position: absolute
   display: flex
   justify-content: center
@@ -54,6 +64,7 @@
     border-radius: 50%
     background: url('../img/Vector.svg') no-repeat center
     margin-left: 12px
+
 
 .instagram
  display: flex
