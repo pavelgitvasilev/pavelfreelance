@@ -404,6 +404,17 @@ template {
   max-width: 1256px;
   margin: auto; }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.col-30 {
+  flex-basis: 30%; }
+
+.col-50 {
+  flex-basis: 50%; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -419,18 +430,46 @@ img {
 
 .section {
   padding: 60px 0; }
+  .section--dark {
+    background-color: #131313;
+    color: #fff; }
   .section-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Yeseva One', cursive; }
-    .section-title__image::before, .section-title__image::after {
-      content: '';
-      display: inline-block;
-      vertical-align: text-top;
-      width: 32px;
-      height: 2px;
-      background-color: #E3B873;
-      margin: 0 10px; }
+    text-align: center; }
+    .section-title--left {
+      text-align: left; }
+    .section-title__heading {
+      text-transform: uppercase;
+      font-family: 'Yeseva One', cursive;
+      line-height: 138.6%; }
+      .section-title__heading--primary {
+        color: #E3B873; }
+    .section-title__word {
+      display: block;
+      position: relative; }
+      .section-title__word::after {
+        content: '';
+        margin-left: 0.95rem;
+        position: absolute;
+        top: 50%;
+        width: 6.57rem;
+        height: 0.07rem;
+        background-color: #E3B873; }
+    .section-title__text {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 31.57rem; }
+    .section-title__image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__image::before, .section-title__image::after {
+        content: '';
+        display: inline-block;
+        vertical-align: text-top;
+        width: 32px;
+        height: 2px;
+        background-color: #E3B873;
+        margin: 0 10px; }
 
 .header {
   position: fixed;
@@ -584,14 +623,6 @@ img {
       color: #363636;
       max-width: 52.92rem;
       margin-bottom: 0.6rem; }
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; }
-
-.col {
-  flex-basis: 32%; }
 
 .card__text {
   position: relative;
