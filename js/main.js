@@ -91,24 +91,54 @@ $(document).ready(function () {
   next.css('left', prev.width() + 10 + bullets.width() + 10);
   bullets.css('left', prev.width() + 10);
 
-  new WOW().init();
 
-  var wow = new WOW(
-    {
-      boxClass:     '.video__play',      // animated element css class (default is wow)
-      animateClass: 'fadeInRight', // animation css class (default is animated)
-      offset:       0,          // distance to the element when triggering the animation (default is 0)
-      mobile:       true,       // trigger animations on mobile devices (default is true)
-      live:         true,       // act on asynchronously loaded content (default is true)
-      callback:     function(box) {
-        // the callback is fired every time an animation is started
-        // the argument that is passed in is the DOM node being animated
-      },
-      scrollContainer: null,    // optional scroll container selector, otherwise use window,
-      resetAnimation: true,     // reset animation on end (default is true)
-    }
-  );
-  wow.init();
+
+    //Валидация формы
+
+    $('.modal__form').validate({
+      errorClass: "invalid",
+      rules: {
+        // строчное правило
+        userName: {
+          required: true,
+          minlength: 2
+        },
+        userPhone: {
+          required: true,
+          tel: true
+        },
+        // правило обьекта (целого блока)
+        userEmail: {
+          required: true,
+          email: true
+        }
+      }, 
+      // правила сообщения
+      messages: {
+        userName: {
+          required:"Введите имя",
+          minlength: "Имя должно быть не менее 2 символов"
+        },
+        userEmail: {
+          required: "Введите имэйл",
+          email: "Введите в формате name@domain.com"
+        },
+        userPhone: {
+          required: "Введите телефон",
+          tel: "Введите в формате +3752911111111"
+        }
+      }
+
+    });
+
+    
+
+    //Маска для номера телефона
+
+    $('[type=tel]').mask('+375(00) 000-00-00', {placeholder: "+375(__) ___-__-__"});
+
+    // Маска для плэйсхолдера
+    // $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
 
 }); //закрывается документ реди
 
