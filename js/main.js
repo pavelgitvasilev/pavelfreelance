@@ -56,8 +56,9 @@
 $(document).ready(function () {
  var modal = $('.modal'),
      feedback = $('.feedback'),
+     vk = $('.vk'),
      modalBtn = $('[data-toggle=modal]'),
-     CloseBtn = $('.modal__close')
+     closeBtn = $('.modal__close')
      switchModal = () => {
       modal.classList.toggle('modal--visible')};
      
@@ -67,7 +68,7 @@ $(document).ready(function () {
 
  });//ок все работает
 
-  CloseBtn.on('click', function() {
+  closeBtn.on('click', function() {
   modal.toggleClass('modal--visible'); 
 
  });//ок все работает
@@ -156,7 +157,8 @@ $(document).ready(function () {
             // alert('Супер! Ваша заявка успешко отправлена!');
               $(form)[0].reset();
               modal.removeClass('modal--visible'); 
-              feedback.toggleClass('feedback--visible');
+              vk.toggleClass('vk--visible');
+              vk.removeClass('vk--visible');
   
           },
           error: function(response) {
