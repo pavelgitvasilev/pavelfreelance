@@ -37,8 +37,25 @@
  
 // jQuery библиотека
 
+
+
+// $(document).ready(function (){
+//   var feedback = $('.feedback'),
+//       feedbackBtn = $('[data-toggle=feedback]'),
+//       closeBtn = $('.feedback__close');
+//       feedbackBtn.on('click', function () {
+//       feedback.toggleClass('feedback--visible');
+//   });
+//     closeBtn.on('click', function () {
+//     feedback.toggleClass('feedback--visible');
+//   });
+// });
+
+
+
 $(document).ready(function () {
  var modal = $('.modal'),
+     feedback = $('.feedback'),
      modalBtn = $('[data-toggle=modal]'),
      CloseBtn = $('.modal__close')
      switchModal = () => {
@@ -103,10 +120,10 @@ $(document).ready(function () {
           required: true,
           minlength: 2
         },
-        userPhone: {
-          required: true,
-          tel: true
-        },
+        // userPhone: {
+        //   required: true,
+        //   tel: true
+        // },
         // правило обьекта (целого блока)
         userEmail: {
           required: true,
@@ -119,16 +136,34 @@ $(document).ready(function () {
           required:"Введите имя",
           minlength: "Имя должно быть не менее 2 символов"
         },
+        // userPhone: "Телефон обязателен" ,
         userEmail: {
           required: "Введите имэйл",
           email: "Введите в формате name@domain.com"
         },
-        userPhone: {
-          required: "Введите телефон",
-          tel: "Введите в формате +3752911111111"
-        }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function(response) {
+            // $('.feedback');
+            // $(form)[0].reset();
+            // modal.removeClass('modal--visible'); 
+            // $('.modal--visible').fadeOut();
+  
+            // alert('Супер! Ваша заявка успешко отправлена!');
+              $(form)[0].reset();
+              modal.removeClass('modal--visible'); 
+              feedback.toggleClass('feedback--visible');
+  
+          },
+          error: function(response) {
+            console.error('Ошибка запроса' + response);
+          }
+        });
       }
-
     });
 
     
