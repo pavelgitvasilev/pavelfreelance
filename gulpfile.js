@@ -31,12 +31,4 @@ function serveSass() {
 };    
 exports.serve = bs;
 
-// Minify-css
-// gulp.task('styles', function() {
-//     return gulp.src(['css/*.css'])
-//     .pipe(concat('styles.min.css'))
-//     .pipe(minifyCSS({
-//     keepBreaks: true
-//     }))
-//     .pipe(gulp.dest('production/css'));
-//     });
+
